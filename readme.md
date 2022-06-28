@@ -23,3 +23,5 @@ A Sentiment Analysis Approach to the Prediction of Market Volatility - https://a
 Strategies for Trading Volatility With Options - https://www.investopedia.com/articles/investing/021716/strategies-trading-volatility-options-nflx.asp
 
 Twitter sentiment around the Earnings Announcement events - https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0173151
+
+- Inspired by Dhyey Mehta
