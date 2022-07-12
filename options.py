@@ -1,30 +1,33 @@
+# importing Yahoo Finance, Pandas and datetime packages
 import yfinance as yf
 import pandas as pd
 from datetime import datetime
 
-# getOptionInfo: Returns relevant information on various options using yahoo finance
+'''
+Returns relevant information on various options using yahoo finance
+# Makes API call
+# Fetching options data
+# Info of option + underlying security
+# Out of the money options
+# Since close to the money options are more sensitive to implied volatility changes, the algorithm selects an option with a strike price close to current market price
+'''
 def getOptionInfo(ticker:str,typeOption:str="C")->dict:
-    # Makes API call
+    
     stock = yf.Ticker("^"+ticker) # ^ added for indexes
     info = stock.info
     options_exp = stock.options[2] # Arbitrarily takes third availible expiry date
-
-    # Fetching options data
+    
     optionsChain = stock.option_chain(options_exp)
     if (typeOption=="C"):
         data = optionsChain[0]
     else:
         data = optionsChain[1]
-
-    # Info of option + underlying security 
+        
     assetPrice = info["regularMarketPrice"]
     timetoExp = ((datetime.strptime(options_exp, r"%Y-%m-%d") - datetime.today()).days) / 365
     
-    # Out of the money options
     OutTM = data[data["inTheMoney"]==False]
 
-    # Since close to the money options are more sensitive to implied volatility changes,
-    # the algorithm selects an option with a strike price close to current market price
     option = OutTM.iloc[[2]]
 
     strikePrice = option.iloc[0]["strike"]
