@@ -1,14 +1,15 @@
+# importing Pandas, NumPy and TensorFlow
 import pandas
 import numpy as np
 import tensorflow as tf
 from tensorflow import keras
 from tensorflow.keras import layers
 
-# Use historical sentiment and volatility data to from regression model
+# Using historical sentiment and volatility data to from regression model
 df = pandas.read_csv("./data.csv")
 df.drop("Date")
 
-# Use 80% of the data for training
+# Using 80% of the data for training
 trainData = df.sample(frac=0.8, random_state=0)
 testData = df.drop(trainData.index)
 
