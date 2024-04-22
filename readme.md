@@ -24,6 +24,8 @@ Strategies for Trading Volatility With Options - https://www.investopedia.com/ar
 
 Twitter sentiment around the Earnings Announcement events - https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0173151
 
+Python Implementational Reference from Dhyey Mehta's VoliTrader.
+
 R. Almgrem. Financial derivatives and partial differential equations. The American Mathematical Monthly, 109(1):1-12, 2002.
 
 F. Black and M. Scholes. The pricing of options and corporate liabilities. The Journal of Political Economy, 81(3):637-654, 1073.8
@@ -39,3 +41,5 @@ Gregory F. Lawler. Stochastic Calculus: An Introduction with Applications, 2014.
 Panayotis Mertikopoulos. Stochastic Perturbations in Game Theory and Applications to Networks. National and Kapodistrian University of Athens. 2010.
 
 Gregory F. Lawler. Introduction to Stochastic Processes, Second Edition, 2006.
+
+
